@@ -128,6 +128,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7157793024390969739, guid: 75b8384850bbb6b459e126b0ac4f0964, type: 3}
   m_PrefabInstance: {fileID: 3328680875487747571}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &305891551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5650377164619631403, guid: b54afc9c8519faa43807997d5f33c971, type: 3}
+  m_PrefabInstance: {fileID: 9107213790716425334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &305940992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -519,10 +524,34 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1548063238475561543, guid: b54afc9c8519faa43807997d5f33c971, type: 3}
   m_PrefabInstance: {fileID: 9107213790716425334}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 305891551}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6eb91f861f38d1f43ba8875cd2021d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1040414720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305891551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06910c0eb91da44193871999836a4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1040414722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305891551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d422be2add2da34db5aabbcba618c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1111754112
@@ -696,6 +725,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ecd1f92f4993944998e714d952bda4a, type: 3}
+--- !u!1 &2080295933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080295935}
+  - component: {fileID: 2080295934}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2080295934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080295933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c108213c4eba2e4ea1c59fbe23f282e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceToTrigger: 10
+  youtubeLink: https://www.youtube.com/shorts/P45tZCfx_QY
+--- !u!4 &2080295935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080295933}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 113.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1510918749111644988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1039,7 +1114,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5650377164619631403, guid: b54afc9c8519faa43807997d5f33c971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1040414720}
+    - targetCorrespondingSourceObject: {fileID: 5650377164619631403, guid: b54afc9c8519faa43807997d5f33c971, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1040414722}
   m_SourcePrefab: {fileID: 100100000, guid: b54afc9c8519faa43807997d5f33c971, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1058,3 +1139,4 @@ SceneRoots:
   - {fileID: 634114436}
   - {fileID: 1885257125583828114}
   - {fileID: 2069951522}
+  - {fileID: 2080295935}
