@@ -118,5 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90ef185089c3b247a7fb3f6b7d5eca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToTrigger: 200
   objectToSpawn: {fileID: 159477837113345174}
   numberOfObjects: 5
+  spawnDistance: 50
+  maxActiveObjects: 5
