@@ -3,20 +3,31 @@ using UnityEngine.UI;
 
 public class ClientObserver : MonoBehaviour
 {
-    private Subject subject;
-    private Transform player;
-    private Text messageText;
+    [SerializeField] private Subject subject;
+    [SerializeField] private Transform player;
+    [SerializeField] private Text messageText;
 
+    void Update()
+    {
+        // Check the distance for each observer
+        foreach (Observer observer in subject.GetComponentsInChildren<Observer>())
+        {
+            // Add a debug log to show current distance to each observer
+            float distance = Vector3.Distance(observer.transform.position, player.position);
+            Debug.Log($"{observer.gameObject.name} - Current Distance to Player: {distance}");
+
+            if (observer.IsWithinTriggerDistance())
+            {
+                Debug.Log($"{observer.gameObject.name} - Distance met, notifying observer.");
+                observer.Notify(subject);
+            }
+        }
+    }
     void Start()
     {
-        // Find the Subject and Player in the scene
-        subject = FindObjectOfType<Subject>();
-        player = GameObject.FindWithTag("Player").transform;
-        messageText = GameObject.Find("MessageText").GetComponent<Text>();
-
         if (subject == null || player == null || messageText == null)
         {
-            Debug.LogError("Subject, Player, or MessageText not found! Make sure they exist in the scene.");
+            Debug.LogError("One or more references are missing! Please set them in the Inspector.");
             return;
         }
 
@@ -30,16 +41,7 @@ public class ClientObserver : MonoBehaviour
 
         Debug.Log("All observers registered and set up successfully.");
     }
-
-    void Update()
-    {
-        // Check the distance for each observer
-        foreach (Observer observer in subject.GetComponentsInChildren<Observer>())
-        {
-            if (observer.IsWithinTriggerDistance())
-            {
-                observer.Notify(subject);
-            }
-        }
-    }
 }
+
+
+

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public abstract class Observer : MonoBehaviour
 {
-    public float distanceToTrigger = 10f;  // Distance from the player to trigger the event
+    public float distanceToTrigger = 5f;  // Distance from the player to trigger the event
     protected Transform player;            // Reference to the player
     protected Text messageText;            // Reference to the UI text element for displaying messages
 
